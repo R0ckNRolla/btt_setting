@@ -41,6 +41,7 @@ $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/uTorrent_355_46036_LAA_.exe'
 $destination = 'c:\install\uTorrent.exe'
 Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 #BRAVE installer
 #$tls
 #$source = 'https://laptop-updates.brave.com/latest/winx64'
@@ -169,9 +170,9 @@ Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 
 Start-Sleep -Seconds 10
-'c:\users\administrator\appdata\roaming\bittorrent.exe'
+'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe'
 Start-Sleep -Seconds 5
-'c:\Program Files\qBittorrent.exe'
+'c:\Program Files\qBittorrent\qBittorrent.exe'
 Start-Sleep -Seconds 5
 
 
