@@ -18,14 +18,14 @@ New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\s
 #--------------------
 #echo off
 
-rem Disable WF profiles
-netsh advfirewall set allprofiles state off
+cmd rem Disable WF profiles
+cmd netsh advfirewall set allprofiles state off
 
-rem Disable WF services (does not worked on Windows 10 Redstone 4+)
-sc config mpssvc start= disabled
-sc config mpsdrv start= disabled
-sc stop mpssvc
-sc stop mpsdrv
+cmd rem Disable WF services
+cmd sc config mpssvc start= disabled
+cmd sc config mpsdrv start= disabled
+cmd sc stop mpssvc
+cmd sc stop mpsdrv
 
 #---------------------
 echo "make directory"
