@@ -19,9 +19,9 @@ New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\s
 #echo off
 
 cmd rem Disable WF profiles
-cmd netsh advfirewall set allprofiles state off
+cmd /c "netsh advfirewall set allprofiles state off"
 
-cmd rem Disable WF services
+cmd /c rem Disable WF services
 cmd sc config mpssvc start= disabled
 cmd sc config mpsdrv start= disabled
 cmd sc stop mpssvc
