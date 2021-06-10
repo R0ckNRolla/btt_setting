@@ -145,9 +145,9 @@ cmd /c c:\install\disable_firewall.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
-Start-Sleep -Seconds 120
+Start-Sleep -Seconds 90
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
-Start-Sleep -Seconds 300
+Start-Sleep -Seconds 180
 c:\install\memreduct-3.3.5-setup.exe /S 
 Start-Sleep -Seconds 30
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
