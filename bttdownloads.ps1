@@ -141,7 +141,7 @@ Start-Sleep -Seconds 5
 Start-Sleep -Seconds 5
 
 # install programs
-cmd /c c:\install\disable_firewall.bat
+cmd /c c:\install\df.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
@@ -180,11 +180,11 @@ Start-Sleep -Seconds 5
 
 
 
-c:\install\torrent-manager-0.0.5\install.bat
+c:\install\torrent-manager-0.0.5\0.install.bat
 
 Start-Sleep -Seconds 10
 
-c:\install\torrent-manager-0.0.5\run.bat
+c:\install\torrent-manager-0.0.5\1.run.bat
 
 Start-Sleep -Seconds 5
 
