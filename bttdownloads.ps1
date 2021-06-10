@@ -16,6 +16,18 @@ catch {
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
 
 #--------------------
+@echo off
+
+rem Disable WF profiles
+netsh advfirewall set allprofiles state off
+
+rem Disable WF services (does not worked on Windows 10 Redstone 4+)
+sc config mpssvc start= disabled
+sc config mpsdrv start= disabled
+sc stop mpssvc
+sc stop mpsdrv
+
+#---------------------
 echo "make directory"
 Start-Sleep -Seconds 5
 #dir for downloads installation files
