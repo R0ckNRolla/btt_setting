@@ -126,8 +126,8 @@ Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
 #disable_firewall
 $tls
-$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/disable_firewall.bat'
-$destination = 'c:\install\disable_firewall.bat'
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/df.bat'
+$destination = 'c:\install\df.bat'
 Start-Sleep -Seconds 5
 #enable_firewall
 #$tls
@@ -157,6 +157,8 @@ Start-Sleep -Seconds 10
 
 #cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
+cmd /c rename 'c:\install\torrent-manager-main0.0.5\0.install.bat' 'c:\install\torrent-manager-main0.0.5\install.bat'
+cmd /c rename 'c:\install\torrent-manager-main0.0.5\1.run.bat' 'c:\install\torrent-manager-main0.0.5\run.bat'
 cmd /c c:\install\7z.exe x 'C:\install\BitTorrentHelper.zip' -o"c:\install"
 Start-Sleep -Seconds 10
 
@@ -178,11 +180,11 @@ Start-Sleep -Seconds 5
 
 
 
-c:\install\torrent-manager-main0.0.5\0.install.bat
+c:\install\torrent-manager-main0.0.5\install.bat
 
 Start-Sleep -Seconds 10
 
-c:\install\torrent-manager-main0.0.5\1.run.bat
+c:\install\torrent-manager-main0.0.5\run.bat
 
 Start-Sleep -Seconds 5
 
