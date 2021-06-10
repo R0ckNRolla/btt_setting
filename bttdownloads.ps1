@@ -15,18 +15,6 @@ catch {
 #------------------- UAH
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
 
-#--------------------
-#echo off
-
-#cmd /c rem Disable WF profiles
-#cmd /c netsh advfirewall set allprofiles state off
-
-#cmd /c rem Disable WF services
-#cmd /c sc config mpssvc start= disabled
-#cmd /c sc config mpsdrv start= disabled
-#cmd /c sc stop mpssvc
-#cmd /c sc stop mpsdrv
-
 #---------------------
 echo "make directory"
 Start-Sleep -Seconds 5
