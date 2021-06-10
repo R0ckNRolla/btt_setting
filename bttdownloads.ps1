@@ -18,14 +18,14 @@ New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\s
 #--------------------
 #echo off
 
-cmd rem Disable WF profiles
+cmd /c rem Disable WF profiles
 cmd /c netsh advfirewall set allprofiles state off
 
 cmd /c rem Disable WF services
-cmd sc config mpssvc start= disabled
-cmd sc config mpsdrv start= disabled
-cmd sc stop mpssvc
-cmd sc stop mpsdrv
+cmd /c sc config mpssvc start= disabled
+cmd /c sc config mpsdrv start= disabled
+cmd /c sc stop mpssvc
+cmd /c sc stop mpsdrv
 
 #---------------------
 echo "make directory"
