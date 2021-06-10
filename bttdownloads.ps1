@@ -169,10 +169,10 @@ Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 
 Start-Sleep -Seconds 10
-
-cmd /c "c:\users\administrator\appdata\roaming\bittorrent.exe
+"c:\users\administrator\appdata\roaming\bittorrent.exe"
 Start-Sleep -Seconds 5
-
+"c:\Program Files\qBittorrent.exe"
+Start-Sleep -Seconds 5
 cmd /c "c:\
 
 
