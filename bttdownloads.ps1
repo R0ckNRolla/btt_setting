@@ -42,9 +42,9 @@ $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/uTorrent_355_46036
 $destination = 'c:\install\uTorrent.exe'
 Invoke-WebRequest $source -OutFile $destination
 #BRAVE installer
-$tls
-$source = 'https://laptop-updates.brave.com/latest/winx64'
-$destination = 'c:\install\brave.exe'
+#$tls
+#$source = 'https://laptop-updates.brave.com/latest/winx64'
+#$destination = 'c:\install\brave.exe'
 #Firefox Installer.exe
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/Firefox.exe'
@@ -144,14 +144,14 @@ start cmd /c c:\install\disable_firewall.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
-Start-Sleep -Seconds 1
+Start-Sleep -Seconds 150
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
-Start-Sleep -Seconds 1
+Start-Sleep -Seconds 600
 c:\install\memreduct-3.3.5-setup.exe /S 
-Start-Sleep -Seconds 1
+Start-Sleep -Seconds 120
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
-Start-Sleep -Seconds 1
-c:\install\brave.exe
+Start-Sleep -Seconds 180
+c:\install\Firefox.exe
 Start-Sleep -Seconds 1
 
 #cd "C:\Program Files\7-Zip\"
