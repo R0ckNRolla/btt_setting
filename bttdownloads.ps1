@@ -154,7 +154,7 @@ Start-Sleep -Seconds 1
 c:\install\brave.exe
 Start-Sleep -Seconds 1
 
-cd "C:\Program Files\7-Zip\"
+#cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
 cmd /c c:\install\7z.exe x 'C:\install\BitTorrentHelper.zip' -o"c:\install"
 Start-Sleep -Seconds 10
