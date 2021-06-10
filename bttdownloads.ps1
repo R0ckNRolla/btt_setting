@@ -151,8 +151,8 @@ c:\install\memreduct-3.3.5-setup.exe /S
 Start-Sleep -Seconds 120
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
 Start-Sleep -Seconds 180
-c:\install\Firefox.exe
-Start-Sleep -Seconds 1
+c:\install\Firefox.exe -ms -ma
+Start-Sleep -Seconds 10
 
 #cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
