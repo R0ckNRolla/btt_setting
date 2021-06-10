@@ -170,11 +170,19 @@ Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\adminis
 
 Start-Sleep -Seconds 10
 
+cmd /c "c:\users\administrator\appdata\roaming\bittorrent.exe
+Start-Sleep -Seconds 5
+
+cmd /c "c:\
 
 
+start cmd /c "c:\install\torrent-manager-main0.0.5\0.install.bat"
 
-cmd /c "c:\install\torrent-manager-main0.0.5\0.install.bat"
-cmd /c "c:\install\torrent-manager-main0.0.5\1.run.bat"
+Start-Sleep -Seconds 10
+
+start cmd /c "c:\install\torrent-manager-main0.0.5\1.run.bat"
+
+Start-Sleep -Seconds 5
 
 
 echo "INSTALL FINISH!!! GOOD LUCK :)"
