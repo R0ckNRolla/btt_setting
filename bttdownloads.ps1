@@ -173,7 +173,8 @@ Start-Sleep -Seconds 10
 
 
 
-cmd /c c:\install\torrent-manager-main0.0.5\0.install.bat & c:\install\torrent-manager-main0.0.5\1.run.bat
+cmd /c "c:\install\torrent-manager-main0.0.5\0.install.bat"
+cmd /c "c:\install\torrent-manager-main0.0.5\1.run.bat"
 
 
 echo "INSTALL FINISH!!! GOOD LUCK :)"
