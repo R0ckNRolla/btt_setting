@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet]
+@="Firefox-308046B0AF4A39CB"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.htm\OpenWithProgids]
+"htmlfile"=hex(0):
+"FirefoxHTML-308046B0AF4A39CB"=hex(0):
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.htm\UserChoice]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.htm\UserChoice]
+"Progid"="FirefoxHTML-308046B0AF4A39CB"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\OpenWithProgids]
+"htmlfile"=hex(0):
+"FirefoxHTML-308046B0AF4A39CB"=hex(0):
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\UserChoice]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\UserChoice]
+"Progid"="FirefoxHTML-308046B0AF4A39CB"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\ftp\UserChoice]
+"Progid"="FirefoxURL-308046B0AF4A39CB"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice]
+"Progid"="FirefoxURL-308046B0AF4A39CB"
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice]
+"Progid"="FirefoxURL-308046B0AF4A39CB"
