@@ -182,6 +182,7 @@ Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\adminis
 
 
 #на будущее, написать цикл, который будет проверять наличие ехе в папке, если есть запуск, если нет, пауза 10 сек.
+Remove-Item 'c:\install\df.bat'
 Start-Sleep -Seconds 10
 & 'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe'
 Start-Sleep -Seconds 5
