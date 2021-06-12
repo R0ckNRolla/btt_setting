@@ -225,18 +225,18 @@ Start-Sleep -Seconds 5
 
 
 & "c:\Program Files\Mem Reduct\memreduct.exe"
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 30
 
 start "" "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
-Start-Sleep -Seconds 2
+Start-Sleep -Seconds 1
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
-Start-Sleep -Seconds 10
+#Start-Sleep -Seconds 10
 
 #& 'c:\install\torrent-manager-0.0.5\1.run.bat'
 
-Start-Sleep -Seconds 5
+#Start-Sleep -Seconds 5
 
 echo "INSTALL FINISH! GOOD LUCK!"
 pause
