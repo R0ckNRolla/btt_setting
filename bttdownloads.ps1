@@ -146,7 +146,7 @@ Start-Sleep -Seconds 5
 
 
 
-Start-Sleep -Seconds 5
+#Start-Sleep -Seconds 5
 
 # install programs
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
