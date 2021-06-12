@@ -195,7 +195,7 @@ Start-Sleep -Seconds 5
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
-№Start-Sleep -Seconds 10
+Start-Sleep -Seconds 10
 
 #& 'c:\install\torrent-manager-0.0.5\1.run.bat'
 
