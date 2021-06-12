@@ -32,7 +32,7 @@ Start-Sleep -Seconds 5
 $tls = [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 #BitTorrent_7.10.5.46011.exe
-$source = 'http://45.93.5.57/!/BitTorrent_7.10.5.46011.exe'
+$source = ''
 $destination = 'c:\install\BitTorrent_7.10.5.46011.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
 Start-Sleep -Seconds 5
@@ -188,10 +188,20 @@ Copy-Item  -Path "C:\install\settings.dat" -Destination "C:\Users\administrator\
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\settings.dat.old" -Destination "C:\Users\administrator\AppData\Roaming\BitTorrent\settings.dat.old" -Force -Verbose
 Start-Sleep -Seconds 1
+#Copy-Item  -Path "C:\install\settings.dat" -Destination "C:\Users\administrator\AppData\Roaming\uTorrent\settings.dat" -Force -Verbose
+#Start-Sleep -Seconds 1
+#Copy-Item -Path "C:\install\settings.dat.old" -Destination "C:\Users\administrator\AppData\Roaming\uTorrent\settings.dat.old" -Force -Verbose
+#Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent.ini" -Force -Verbose
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 Start-Sleep -Seconds 1
+& "c:\Program Files\Mem Reduct\memreduct.exe"
+Start-Sleep -Seconds 15
+
+cmd /c taskkill /im memreduct.exe /f
+Start-Sleep -Seconds 5
+
 Copy-Item -Path "C:\install\memreduct.ini" -Destination "C:\Users\Administrator\AppData\Roaming\Henry++\Mem Reduct\memreduct.ini" -Force -Verbose
 Start-Sleep -Seconds 1
 
@@ -201,17 +211,14 @@ Remove-Item 'c:\install\df.bat'
 Start-Sleep -Seconds 10
 & 'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe'
 Start-Sleep -Seconds 5
+#& 'c:\users\administrator\appdata\roaming\utorrent\utorrent.exe'
+#Start-Sleep -Seconds 5
 & 'c:\Program Files\qBittorrent\qBittorrent.exe'
 Start-Sleep -Seconds 5
-& "c:\Program Files\Mem Reduct\memreduct.exe"
-Start-Sleep -Seconds 15
 
 
-cmd /c taskkill /im memreduct.exe /f
-Start-Sleep -Seconds 5
 & "c:\Program Files\Mem Reduct\memreduct.exe"
 Start-Sleep -Seconds 5
-
 
 
 & 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
