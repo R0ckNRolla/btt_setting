@@ -151,7 +151,7 @@ Start-Sleep -Seconds 5
 # install programs
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
 Start-Sleep -Seconds 120
-cmd /c c:\install\df.bat
+& c:\install\df.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
