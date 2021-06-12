@@ -204,6 +204,12 @@ Start-Sleep -Seconds 5
 & 'c:\Program Files\qBittorrent\qBittorrent.exe'
 Start-Sleep -Seconds 5
 & "c:\Program Files\Mem Reduct\memreduct.exe"
+Start-Sleep -Seconds 15
+
+
+cmd /c taskkill /im memreduct.exe /f
+Start-Sleep -Seconds 5
+& "c:\Program Files\Mem Reduct\memreduct.exe"
 Start-Sleep -Seconds 5
 
 
