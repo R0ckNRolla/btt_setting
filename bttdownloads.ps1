@@ -181,7 +181,7 @@ Start-Sleep -Seconds 60
 c:\install\Firefox.exe -ms -ma
 Start-Sleep -Seconds 2
 cmd /c taskkill.exe /im firefox.exe /f
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 30
 regedit /S C:\install\firefox.reg
 Start-Sleep -Seconds 5
 & 'C:\Program Files\Mozilla Firefox\firefox.exe'
