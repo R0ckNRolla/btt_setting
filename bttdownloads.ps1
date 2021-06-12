@@ -150,7 +150,7 @@ Start-Sleep -Seconds 5
 
 # install programs
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
-Start-Sleep -Seconds 180
+Start-Sleep -Seconds 120
 cmd /c c:\install\df.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
@@ -165,10 +165,11 @@ Start-Sleep -Seconds 10
 
 #cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
+Start-Sleep -Seconds 5
 #cmd 'c:\install\torrent-manager-0.0.5\0.install.bat'
 #cmd 'c:\install\torrent-manager-0.0.5\1.run.bat'
 cmd /c c:\install\7z.exe x 'C:\install\BitTorrentHelper.zip' -o"c:\install"
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 5
 
  
 Copy-Item  -Path "C:\install\settings.dat" -Destination "C:\Users\administrator\AppData\Roaming\BitTorrent\settings.dat" -Force -Verbose
@@ -179,6 +180,8 @@ Copy-Item -Path "C:\install\qBittorrent.ini" -Destination "C:\Users\administrato
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 
+
+#на будущее, написать цикл, который будет проверять наличие ехе в папке, если есть запуск, если нет, пауза 10 сек.
 Start-Sleep -Seconds 10
 & 'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe'
 Start-Sleep -Seconds 5
@@ -187,11 +190,11 @@ Start-Sleep -Seconds 5
 
 
 
-& "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\autoran.bat"
+& 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
-Start-Sleep -Seconds 10
+№Start-Sleep -Seconds 10
 
 #& 'c:\install\torrent-manager-0.0.5\1.run.bat'
 
