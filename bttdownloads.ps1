@@ -180,9 +180,9 @@ Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "
 Start-Sleep -Seconds 60
 c:\install\Firefox.exe -ms -ma
 Start-Sleep -Seconds 2
-regedit /S C:\install\firefox.reg
+cmd /c taskkill.exe /im firefox.exe /f
 Start-Sleep -Seconds 10
-cmd /c taskkill /im firefox.exe /f
+regedit /S C:\install\firefox.reg
 Start-Sleep -Seconds 5
 & 'C:\Program Files\Mozilla Firefox\firefox.exe'
 Start-Sleep -Seconds 5
