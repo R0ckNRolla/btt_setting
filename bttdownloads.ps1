@@ -176,7 +176,7 @@ Start-Sleep -Seconds 120
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 Start-Sleep -Seconds 90
-cmd /c c:\install\7z.exe x 'C:\install\memreduct.zip' -o""c:\Program Files"
+cmd /c c:\install\7z.exe x 'C:\install\memreduct.zip' -o"c:\Program Files"
 #c:\install\memreduct.exe /S 
 Start-Sleep -Seconds 30
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
@@ -246,5 +246,5 @@ Start-Sleep -Seconds 1
 
 #Start-Sleep -Seconds 5
 
-#echo "INSTALL FINISH! GOOD LUCK!"
+echo "INSTALL FINISH! GOOD LUCK!"
 pause
