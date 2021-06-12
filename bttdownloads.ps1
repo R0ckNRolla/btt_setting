@@ -55,7 +55,7 @@ Start-Sleep -Seconds 5
 #memreduct-3.3.5-setup.exe
 $tls
 $source = 'https://github.com/henrypp/memreduct/releases/download/v.3.3.5/memreduct-3.3.5-setup.exe'
-$destination = 'c:\install\memreduct-3.3.5-setup.exe'
+$destination = 'c:\install\memreduct.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
 Start-Sleep -Seconds 5
 #node-v14.16.1-x64.msi
@@ -128,12 +128,20 @@ Start-Sleep -Seconds 5
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/df.bat'
 $destination = 'c:\install\df.bat'
+Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
 #enable_firewall
 #$tls
 #$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/enable_firewall.bat'
 #$destination = 'c:\install\enable_firewall.bat'
 #Start-Sleep -Seconds 5
+#script_autoran_after_reboot
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/script_autoran.bat'
+$destination = 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\autoran.bat'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
+
 
 
 
@@ -141,14 +149,14 @@ Start-Sleep -Seconds 5
 Start-Sleep -Seconds 5
 
 # install programs
+c:\install\node-v14.16.1-x64.msi  /qn /norestart
+Start-Sleep -Seconds 180
 cmd /c c:\install\df.bat
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 Start-Sleep -Seconds 90
-c:\install\node-v14.16.1-x64.msi  /qn /norestart
-Start-Sleep -Seconds 180
-c:\install\memreduct-3.3.5-setup.exe /S 
+c:\install\memreduct.exe /S 
 Start-Sleep -Seconds 30
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
 Start-Sleep -Seconds 60
@@ -179,12 +187,13 @@ Start-Sleep -Seconds 5
 
 
 
+& "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\autoran.bat"
 
-& 'c:\install\torrent-manager-0.0.5\0.install.bat'
+#& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
 Start-Sleep -Seconds 10
 
-& 'c:\install\torrent-manager-0.0.5\1.run.bat'
+#& 'c:\install\torrent-manager-0.0.5\1.run.bat'
 
 Start-Sleep -Seconds 5
 
