@@ -25,6 +25,8 @@ mkdir c:\install
 mkdir c:\users\administrator\Downloads\bitt
 #dir for downloads settings file qBittorrent
 mkdir C:\Users\administrator\AppData\Roaming\qBittorrent
+#dir for settings memreduct
+mkdir "C:\Users\Administrator\AppData\Roaming\Henry++\Mem Reduct"
 
 #Downloads files
 Start-Sleep -Seconds 5
@@ -55,8 +57,8 @@ Invoke-RestMethod -Uri $source -OutFile $destination
 Start-Sleep -Seconds 5
 #memreduct-3.3.5-setup.exe
 $tls
-$source = 'https://github.com/henrypp/memreduct/releases/download/v.3.3.5/memreduct-3.3.5-setup.exe'
-$destination = 'c:\install\memreduct.exe'
+$source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/memreduct.zip'
+$destination = 'c:\install\memreduct.zip'
 Invoke-RestMethod -Uri $source -OutFile $destination
 Start-Sleep -Seconds 5
 #node-v14.16.1-x64.msi
@@ -174,7 +176,8 @@ Start-Sleep -Seconds 120
 #Start-Sleep -Seconds 1
 c:\install\BitTorrent_7.10.5.46011.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 Start-Sleep -Seconds 90
-c:\install\memreduct.exe /S 
+cmd /c c:\install\7z.exe x 'C:\install\memreduct.zip' -o""c:\Program Files"
+#c:\install\memreduct.exe /S 
 Start-Sleep -Seconds 30
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
 Start-Sleep -Seconds 60
@@ -208,7 +211,7 @@ Copy-Item -Path "C:\install\qBittorrent.ini" -Destination "C:\Users\administrato
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 Start-Sleep -Seconds 1
-& "c:\Program Files\Mem Reduct\memreduct.exe"
+& "c:\Program Files\memreduct\memreduct.exe"
 Start-Sleep -Seconds 15
 
 cmd /c taskkill.exe /im memreduct.exe /f
@@ -229,7 +232,7 @@ Start-Sleep -Seconds 5
 Start-Sleep -Seconds 5
 
 
-& "c:\Program Files\Mem Reduct\memreduct.exe"
+& "c:\Program Files\memreduct\memreduct.exe"
 Start-Sleep -Seconds 30
 
 start "" "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
