@@ -153,6 +153,11 @@ $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/memredu
 $destination = 'C:\install\memreduct80.ini'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/firefox.reg'
+$destination = 'C:\install\firefox.reg'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 
 
 
@@ -173,6 +178,8 @@ Start-Sleep -Seconds 30
 Start-Process -FilePath "C:\install\qbittorrent_4.3.5_setup.exe" -ArgumentList "/S /v/qn"
 Start-Sleep -Seconds 60
 c:\install\Firefox.exe -ms -ma
+Start-Sleep -Seconds 2
+regedit /S C:\install\firefox.reg
 Start-Sleep -Seconds 10
 
 #cd "C:\Program Files\7-Zip\"
@@ -220,8 +227,8 @@ Start-Sleep -Seconds 5
 & "c:\Program Files\Mem Reduct\memreduct.exe"
 Start-Sleep -Seconds 5
 
-
-& 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
+start "" "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
+Start-Sleep -Seconds 2
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
