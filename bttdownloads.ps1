@@ -141,6 +141,18 @@ $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/script_
 $destination = 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
+#memreduct_setting 5 min
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/memreduct5min.ini'
+$destination = 'C:\install\memreduct.ini'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
+#memreduct_setting 80%
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/memreduct80.ini'
+$destination = 'C:\install\memreduct80.ini'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 
 
 
@@ -179,6 +191,9 @@ Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent.ini" -Force -Verbose
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
+Start-Sleep -Seconds 1
+Copy-Item -Path "C:\install\memreduct.ini" -Destination "C:\Users\Administrator\AppData\Roaming\Henry++\Mem Reduct\memreduct.ini" -Force -Verbose
+Start-Sleep -Seconds 1
 
 
 #на будущее, написать цикл, который будет проверять наличие ехе в папке, если есть запуск, если нет, пауза 10 сек.
