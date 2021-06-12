@@ -138,7 +138,7 @@ Start-Sleep -Seconds 5
 #script_autoran_after_reboot
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/script_autoran.bat'
-$destination = 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\autoran.bat'
+$destination = 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
 
