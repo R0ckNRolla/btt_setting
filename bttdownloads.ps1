@@ -182,6 +182,10 @@ c:\install\Firefox.exe -ms -ma
 Start-Sleep -Seconds 2
 regedit /S C:\install\firefox.reg
 Start-Sleep -Seconds 10
+cmd /c taskkill /im firefox.exe /f
+Start-Sleep -Seconds 5
+& 'C:\Program Files\Mozilla Firefox\firefox.exe'
+Start-Sleep -Seconds 5
 
 #cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
@@ -207,7 +211,7 @@ Start-Sleep -Seconds 1
 & "c:\Program Files\Mem Reduct\memreduct.exe"
 Start-Sleep -Seconds 15
 
-cmd /c taskkill /im memreduct.exe /f
+cmd /c taskkill.exe /im memreduct.exe /f
 Start-Sleep -Seconds 5
 
 Copy-Item -Path "C:\install\memreduct.ini" -Destination "C:\Users\Administrator\AppData\Roaming\Henry++\Mem Reduct\memreduct.ini" -Force -Verbose
