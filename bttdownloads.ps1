@@ -32,7 +32,8 @@ Start-Sleep -Seconds 5
 $tls = [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 #BitTorrent_7.10.5.46011.exe
-$source = ''
+$tls
+$source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/BitTorrent_7.10.5.46011.exe'
 $destination = 'c:\install\BitTorrent_7.10.5.46011.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
 Start-Sleep -Seconds 5
