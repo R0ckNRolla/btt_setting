@@ -246,5 +246,5 @@ Start-Sleep -Seconds 1
 
 #Start-Sleep -Seconds 5
 
-echo "INSTALL FINISH! GOOD LUCK!"
+#echo "INSTALL FINISH! GOOD LUCK!"
 pause
