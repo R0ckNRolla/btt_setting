@@ -161,7 +161,11 @@ $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/firefox
 $destination = 'C:\install\firefox.reg'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
-
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/reg_settings.bat'
+$destination = 'C:\install\reg_settings.bat'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 
 
 
@@ -190,6 +194,8 @@ Start-Sleep -Seconds 5
 & 'C:\Program Files\Mozilla Firefox\firefox.exe'
 Start-Sleep -Seconds 5
 
+
+
 #cd "C:\Program Files\7-Zip\"
 cmd /c c:\install\7z.exe x 'C:\install\SCRIPT_BITTORRENT0.0.5.zip' -o"c:\install"
 Start-Sleep -Seconds 5
@@ -211,8 +217,11 @@ Copy-Item -Path "C:\install\qBittorrent.ini" -Destination "C:\Users\administrato
 Start-Sleep -Seconds 1
 Copy-Item -Path "C:\install\qBittorrent-data.ini" -Destination "C:\Users\administrator\AppData\Roaming\qBittorrent\qBittorrent-data.ini" -Force -Verbose
 Start-Sleep -Seconds 1
+& 'C:\install\reg_settings.bat'
+Start-Sleep -Seconds 5
 & "c:\Program Files\memreduct\memreduct.exe"
 Start-Sleep -Seconds 15
+
 
 cmd /c taskkill.exe /im memreduct.exe /f
 Start-Sleep -Seconds 5
