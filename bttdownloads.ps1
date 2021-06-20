@@ -166,6 +166,11 @@ $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/reg_set
 $destination = 'C:\install\reg_settings.bat'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
+$tls
+$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/update_scheduler.bat'
+$destination = 'C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\update_scheduler.bat'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 
 
 
@@ -203,6 +208,9 @@ Start-Sleep -Seconds 5
 #cmd 'c:\install\torrent-manager-0.0.5\1.run.bat'
 cmd /c c:\install\7z.exe x 'C:\install\BitTorrentHelper.zip' -o"c:\install"
 Start-Sleep -Seconds 5
+cmd /c SCHTASKS /create /tn \Microsoft\Windows\test /sc HOURLY /mo 12 /tr "cmd /c C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\update_scheduler.bat"  /ru "NT AUTHORITY\SYSTEM" /RL HIGHEST /F
+Start-Sleep -Seconds 1
+cmd /c SCHTASKS /tn \Microsoft\Windows\test /run
 
  
 Copy-Item  -Path "C:\install\settings.dat" -Destination "C:\Users\administrator\AppData\Roaming\BitTorrent\settings.dat" -Force -Verbose
