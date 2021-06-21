@@ -17,7 +17,7 @@ New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\s
 
 #---------------------
 echo "make directory"
-Start-Sleep -Seconds 5
+#Start-Sleep -Seconds 5
 #dir for downloads installation files
 mkdir c:\install
 #mkdir c:\!!!
