@@ -18,5 +18,4 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hi
 :: To kill and restart explorer
 taskkill /f /im explorer.exe
 start explorer.exe
-PAUSE 2
 EXIT
