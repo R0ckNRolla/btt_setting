@@ -38,13 +38,13 @@ $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/BitTorrent_7.10.5.46011.exe'
 $destination = 'c:\install\BitTorrent_7.10.5.46011.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #uTorrent_LAA
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/uTorrent_355_46036_LAA_.exe'
 $destination = 'c:\install\uTorrent.exe'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #BRAVE installer
 #$tls
 #$source = 'https://laptop-updates.brave.com/latest/winx64'
@@ -54,49 +54,49 @@ $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/Firefox.exe'
 $destination = 'c:\install\Firefox.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #memreduct-3.3.5-setup.exe
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/memreduct.zip'
 $destination = 'c:\install\memreduct.zip'
 Invoke-RestMethod -Uri $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #node-v14.16.1-x64.msi
 $tls
 $source = 'https://nodejs.org/dist/v14.16.1/node-v14.16.1-x64.msi'
 $destination = 'c:\install\node-v14.16.1-x64.msi'
 Invoke-RestMethod -Uri $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #qbittorrent_4.3.5_setup.exe github edition
 $tls
 $source = 'https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.5.10/qbittorrent_4.3.5.10_x64_setup.exe'
 $destination = 'c:\install\qbittorrent_4.3.5_setup.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #qBittorrent.ini
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/qBittorrent.ini'
 $destination = 'c:\install\qBittorrent.ini'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #qBittorent-data.ini
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/qBittorrent-data.ini'
 $destination = 'c:\install\qBittorrent-data.ini'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #settings.dat
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/settings.dat'
 $destination = 'c:\install\settings.dat'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #settings.dat.old
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/settings.dat.old'
 $destination = 'c:\install\settings.dat.old'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #7z2102-x64.exe
 #$tls
 #$source = 'https://www.7-zip.org/a/7z2102-x64.exe'
@@ -108,31 +108,31 @@ $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/7z.exe'
 $destination = 'c:\install\7z.exe'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #download 7z.dll
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/7z.dll'
 $destination = 'c:\install\7z.dll'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #torrent-manager-main 0.0.5.7z	
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/SCRIPT_BITTORRENT0.0.5.zip'
 $destination = 'c:\install\SCRIPT_BITTORRENT0.0.5.zip'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #btt_settings
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/BitTorrentHelper.zip'
 $destination = 'c:\install\BitTorrentHelper.zip'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #disable_firewall
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/df.bat'
 $destination = 'c:\install\df.bat'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #enable_firewall
 #$tls
 #$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/enable_firewall.bat'
@@ -143,34 +143,34 @@ $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/script_autoran.bat'
 $destination = 'C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #memreduct_setting 5 min
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/memreduct5min.ini'
 $destination = 'C:\install\memreduct.ini'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 #memreduct_setting 80%
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/memreduct80.ini'
 $destination = 'C:\install\memreduct80.ini'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/firefox.reg'
 $destination = 'C:\install\firefox.reg'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/reg_settings.bat'
 $destination = 'C:\install\reg_settings.bat'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 $tls
 $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/update_scheduler.bat'
 $destination = 'C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\update_scheduler.bat'
 Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 
 
 
