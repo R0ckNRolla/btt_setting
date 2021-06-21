@@ -9,7 +9,7 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /V Us
 ::показывать значки в трее; требуеться перезапуск проводника
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /V TaskbarSmallIcons /T REG_DWORD /D 1 /F
 ::отключить автообновление винды; требуеться перезагузка винды
-DEG ADD "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU\NoAutoUpdate" /V DisableWindowsUpdateAccess /T EG_DWORD /D 1 /F
+REG ADD "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU\NoAutoUpdate" /V DisableWindowsUpdateAccess /T EG_DWORD /D 1 /F
 ::показывать скрытые файлы и папки
 reg add “HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced” /v Hidden /t REG_DWORD /d 1 /f
 ::отображать расширения файлов
