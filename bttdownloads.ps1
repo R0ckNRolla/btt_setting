@@ -174,6 +174,12 @@ $source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/update_
 $destination = 'C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\update_scheduler.bat'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 5
+echo "Download python3.9.5"
+$tls
+$source = 'https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe'
+$destination = 'C:\install\python.exe'
+Invoke-WebRequest $source -OutFile $destination
+Start-Sleep -Seconds 5
 
 
 
@@ -191,6 +197,9 @@ Start-Sleep -Seconds 2
 #Start-Sleep -Seconds 1
 echo "install BitTorrent"
 & "c:\install\BitTorrent_7.10.5.46011.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+Start-Sleep -Seconds 2
+echo "install python"
+c:\install\C:\install\python.exe /quiet InstallAllUsers=1 PrependPath=1
 Start-Sleep -Seconds 2
 echo "unzip memreduct"
 cmd /c c:\install\7z.exe x 'C:\install\memreduct.zip' -o"c:\Program Files"
