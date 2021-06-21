@@ -29,7 +29,7 @@ mkdir C:\Users\administrator\AppData\Roaming\qBittorrent
 mkdir "C:\Users\Administrator\AppData\Roaming\Henry++\Mem Reduct"
 
 #Downloads files
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 1
 
 $tls = [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
