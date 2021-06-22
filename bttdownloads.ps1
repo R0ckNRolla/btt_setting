@@ -199,7 +199,7 @@ echo "install BitTorrent"
 & "c:\install\BitTorrent_7.10.5.46011.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 Start-Sleep -Seconds 2
 echo "install python"
-c:\install\C:\install\python.exe /quiet InstallAllUsers=1 PrependPath=1
+& C:\install\python.exe /quiet InstallAllUsers=1 PrependPath=1
 Start-Sleep -Seconds 2
 echo "unzip memreduct"
 cmd /c c:\install\7z.exe x 'C:\install\memreduct.zip' -o"c:\Program Files"
