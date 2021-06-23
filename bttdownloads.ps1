@@ -20,6 +20,7 @@ New-ItemProperty -Path HKLM:Software\Policies\Microsoft\Windows\WindowsUpdate\AU
 New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name Hidden -PropertyType DWord -Value 1 -Force
 New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name HideFileExt -PropertyType DWord -Value 0 -Force
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\Run -Name qbittorrent.exe -Value "C:\Program Files\qBittorrent\qbittorrent.exe" -Force
+New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer -Name EnableAutoTray -PropertyType DWord -Value 0 -Force
 
 taskkill /f /im explorer.exe
 & explorer.exe
