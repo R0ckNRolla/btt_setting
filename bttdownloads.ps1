@@ -141,11 +141,11 @@ $destination = 'c:\install\BitTorrentHelper.zip'
 Invoke-WebRequest $source -OutFile $destination
 Start-Sleep -Seconds 1
 #echo "Download disable_firewall"
-$tls
-$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/df.bat'
-$destination = 'c:\install\df.bat'
-Invoke-WebRequest $source -OutFile $destination
-Start-Sleep -Seconds 1
+#$tls
+#$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/df.bat'
+#$destination = 'c:\install\df.bat'
+#Invoke-WebRequest $source -OutFile $destination
+#Start-Sleep -Seconds 1
 ##echo "Download enable_firewall"
 #$tls
 #$source = 'https://raw.githubusercontent.com/R0ckNRolla/btt_setting/main/enable_firewall.bat'
@@ -204,8 +204,8 @@ Start-Sleep -Seconds 15
 c:\install\node-v14.16.1-x64.msi  /qn /norestart
 Start-Sleep -Seconds 2
 #echo "run disable_firewall"
-& c:\install\df.bat
-Start-Sleep -Seconds 2
+#& c:\install\df.bat
+#Start-Sleep -Seconds 2
 #c:\install\7z2102-x64.exe /S
 #Start-Sleep -Seconds 1
 #echo "install BitTorrent"
