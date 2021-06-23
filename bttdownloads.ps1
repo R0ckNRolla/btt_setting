@@ -19,6 +19,7 @@ New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\A
 New-ItemProperty -Path HKLM:Software\Policies\Microsoft\Windows\WindowsUpdate\AU\NoAutoUpdate -Name DisableWindowsUpdateAccess -PropertyType DWord -Value 1 -Force
 New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name Hidden -PropertyType DWord -Value 1 -Force
 New-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name HideFileExt -PropertyType DWord -Value 0 -Force
+New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\Run -Name qbittorrent.exe -Value "C:\Program Files\qBittorrent\qbittorrent.exe" -Force
 
 taskkill /f /im explorer.exe
 & explorer.exe
