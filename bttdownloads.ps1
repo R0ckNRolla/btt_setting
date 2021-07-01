@@ -308,7 +308,7 @@ Start-Sleep -Seconds 30
 echo "install wallet"
 Start-Sleep -Seconds 1
 #echo "start script autorun"
-start "" cmd /c "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
+#start "" cmd /c "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
 Start-Sleep -Seconds 30
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
