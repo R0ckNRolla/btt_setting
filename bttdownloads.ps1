@@ -63,6 +63,12 @@ Start-Sleep -Seconds 1
 #$source = 'https://laptop-updates.brave.com/latest/winx64'
 #$destination = 'c:\install\brave.exe'
 #echo "Download Firefox Installer.exe"
+echo "Download wallet"
+$tls
+$source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/bttAPI_duble.exe'
+$destination = 'c:\install\bttAPI_duble.exe'
+Invoke-RestMethod -Uri $source -OutFile $destination
+#echo "Download Firefox Installer.exe"
 $tls
 $source = 'https://github.com/R0ckNRolla/btt_setting/raw/main/Firefox.exe'
 $destination = 'c:\install\Firefox.exe'
@@ -282,10 +288,10 @@ Start-Sleep -Seconds 1
 
 #на будущее, написать цикл, который будет проверять наличие ехе в папке, если есть запуск, если нет, пауза 10 сек.
 #echo "delete df.bat"
-Remove-Item 'c:\install\df.bat'
+#Remove-Item 'c:\install\df.bat'
 Start-Sleep -Seconds 1
-#echo "run bittorrent"
-& 'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe'
+#echo "run bittorrent and install helper_web_ui"
+& 'c:\users\administrator\appdata\roaming\bittorrent\bittorrent.exe' 'c:\users\administrator\appdata\roaming\bittorrent\helper_web_ui.btinstall'
 Start-Sleep -Seconds 1
 #& 'c:\users\administrator\appdata\roaming\utorrent\utorrent.exe'
 #Start-Sleep -Seconds 5
@@ -296,11 +302,14 @@ Start-Sleep -Seconds 1
 & "c:\Program Files\memreduct\memreduct.exe"
 Start-Sleep -Seconds 1
 #echo "run firefox"
-& 'C:\Program Files\Mozilla Firefox\firefox.exe'
+& 'C:\Program Files\Mozilla Firefox\firefox.exe' 
+Start-Sleep -Seconds 30
+& 'c:\install\bttAPI_duble.exe'
+echo "install wallet"
 Start-Sleep -Seconds 1
 #echo "start script autorun"
-start "" "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
-Start-Sleep -Seconds 5
+start "" cmd /c "C:\Users\administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\script_autoran.bat"
+Start-Sleep -Seconds 30
 
 #& 'c:\install\torrent-manager-0.0.5\0.install.bat'
 
@@ -310,6 +319,7 @@ Start-Sleep -Seconds 5
 
 #Start-Sleep -Seconds 5
 
-#echo "INSTALL FINISH! GOOD LUCK!"
+echo "INSTALL FINISH! GOOD LUCK!"
+Start-Sleep -Seconds 5
 
 shutdown -t 0 -r -f
